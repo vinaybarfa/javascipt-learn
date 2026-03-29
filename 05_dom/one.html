@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+    <style>
+        .bg-black {
+            background-color: #212121;
+            color: #e2e2e2;
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+    <div>
+        <h1 class="heading" id="title">
+            Javascript DOM learing
+        </h1>
+        <p>Here we learn DOM manupilation</p>
+
+        <h3>HAR HAR MAHADEV</h3>
+        <h3>JAY SHREE RAM</h3>
+        <h3>JAY SHREE KRISHANA</h3>
+        <input type="password" name="" id="">
+        <ul>
+            <li class="list-item">first</li>
+            <li class="list-item">secound</li>
+            <li class="list-item">third</li>
+            <li class="list-item">fourth</li>
+        </ul>
+    </div>
+</body>
+<script>
+    document.querySelector(".heading").innerHTML = "श्री गणेशाय नमः"
+    // 'श्री गणेशाय नमः'
+    document.getElementsByClassName("list-item");
+
+    let arr = Array.from(document.getElementsByClassName("list-item"));
+
+
+    arr.forEach((e) => {
+        if (e.innerHTML === "first" || e.innerHTML === "fourth") {
+            e.style.color = "orange"
+        } else {
+            e.style.color = "red"
+        }
+    })
+</script>
+
+</html>

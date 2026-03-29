@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <ul id="flowers">
+        <li><img id="pink" width="200" height="200" src="https://images.pexels.com/photos/31739469/pexels-photo-31739469.jpeg" alt="flower1"></li>
+        <li><img id="yellow" width="200" height="200" src="https://images.pexels.com/photos/13368210/pexels-photo-13368210.jpeg" alt="flower2"></li>
+        <li><img id="blue" width="200" height="200" src="https://images.pexels.com/photos/29234302/pexels-photo-29234302.jpeg" alt="flower3"></li>
+        <li><img id="white" width="200" height="200" src="https://images.pexels.com/photos/35678159/pexels-photo-35678159.jpeg" alt="flower4"></li>
+        <li><img id="red" width="200" height="200" src="https://images.pexels.com/photos/34710450/pexels-photo-34710450.jpeg" alt="flower5"></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById("yellow").onclick = function() {
+    //     alert("clicked on yellow ")
+    // }
+
+
+    // attachEvent()
+    // jQuery - on 
+
+    //// topics to learn
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clienty, screenX, screenY,
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    document.getElementById("white").addEventListener("click", (e) => {
+        alert("your clicked on white flower")
+        console.log(e);
+    }, false)
+
+
+
+</script>
+</html>

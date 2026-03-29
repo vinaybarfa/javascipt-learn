@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Part 2</title>
+</head>
+<body class="" style="background-color: #212121; color: #e2e2e2;">
+    <div class="parent">
+        <div class="day">Mounday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    // Here we are going to use the parent method
+    const parent = document.querySelector(".parent");
+    console.log(parent);
+    // console.log(parent.children[3].innerHTML);
+    for (let i = 0; i < parent.children.length; i++) {
+        const element = parent.children[i].innerHTML;
+        console.log(element);
+    }
+
+    parent.children[1].style.color = "orange";
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+    
+
+    const dayOne = document.querySelector(".day");
+    console.log(dayOne);
+    console.log(dayOne.parentElement);      // it will return the parent of that element
+    console.log(dayOne.nextElementSibling);     // it will return the sibling(bhai) of that element
+    
+
+    console.log("NODES : ", parent.childNodes);
+    
+
+const div = document.createElement("div");
+div.className = "main";
+div.id = Math.round(Math.random() * 10 + 1);
+div.setAttribute("title", "genrated title")
+div.style.backgroundColor = "#E34324"
+// div.innerHTML = "Hello Namaste";
+const addText = document.createTextNode("Hello Java")       // another way to append text in the element
+div.append(addText)
+
+document.body.appendChild(div)
+console.log(div);
+
+
+</script>
+</html>

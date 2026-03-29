@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Part 3</title>
+</head>
+
+<body style="background-color: #212121; color: #f2f2f2;">
+
+    <ul class="language">
+        <li>Java</li>
+        <li>Javascript</li>
+        <li>Python</li>
+        <li>C++</li>
+    </ul>
+
+
+</body>
+<script>
+    let addLanguage = (languageName, backgroundColor, tagName) => {
+        const list = document.createElement(`${tagName}`);
+        list.className = "go";
+        list.id = Math.round(Math.random() * 10 + 1);
+        list.setAttribute("title", "newLanguage")
+        list.style.backgroundColor = `${backgroundColor}`;
+        list.innerHTML = `${languageName}`;
+
+        document.querySelector(".language").appendChild(list);
+        // console.log(list);
+    }
+
+    addLanguage("golang", "red", "li")
+    addLanguage("ruby", "blue", "div")
+
+
+    // Edit
+    const secondLanguage = document.querySelector("li:nth-child(2)");
+    console.log(secondLanguage);
+    const newli = document.createElement("li");
+    newli.textContent = "Typescript"
+    secondLanguage.replaceWith(newli)
+
+
+    // Edit (another method using 'outerHTML')
+    const fourth = document.querySelector("li:nth-child(4)");
+    console.log(fourth);
+    fourth.outerHTML = "<li>C</li>"
+    fourth.replaceWith(fourth);
+
+
+    //remove
+    const lastLang = document.querySelector("li:nth-child(3)");    // or li:last-child
+    console.log(lastLang);
+    lastLang.remove();
+
+</script>
+
+</html>
